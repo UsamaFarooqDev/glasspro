@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/app.css">
+    <title>Online Order Inquiry</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row header align-items-center">
+            <div class="col-sm-3">
+                <i class="fas fa-circle fa-3x"></i>
+                <i class="fas fa-circle fa-3x yellow"></i>
+                <i class="fas fa-circle fa-3x"></i>
+            </div>
+            <div class="col-sm-6">
+                <h3>Your Online Estimate and Service Provider</h3>
+            </div>
+            <div class="col-sm-3 text-end px-5">
+                <a href="index.html"><i class="fas fa-backward fa-2x" style="color: white !important;"></i></a>
+            </div>
+        </div>
+        <div class="row inner">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4> - Window Glass</h4>
+                </div>
+                <div class="col-sm-8 text-center">
+                    <h1>Glass & Doors Pros</h1>
+                </div>
+            </div>
+            <hr>
+            <form action="" method="post">
+                <section id="glass_type">
+                    <div class="col-sm-12 text-center">
+                        <h3>Glass Type</h3>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-6 text-center">
+                            <div class="row">
+                                <label for="">What Type Of Glass Is It?</label>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <input type="text" list="sg" name="" onkeyup="shape_glass()" class="form-control" id="shapeglass" placeholder="Select">
+                                    <datalist id="sg">
+                                        <option value="Singlepane">Singlepane</option>
+                                        <option value="Doublepane">Doublepane</option>
+                                    </datalist>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row text-center">
+                                <div class="col-sm-6 img_box">
+                                    <img src="images/window/singlepane.png" class="img-fluid img" alt="">
+                                    <br>
+                                    <em>Singlepane</em>
+                                </div>
+                                <div class="col-sm-6 img_box">
+                                    <img src="images/window/doublepane.jfif" class="img-fluid img" alt="">
+                                    <br>
+                                    <em>Doublepane</em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   <br>
+                </section>
+                <section id="glass_singlepane" style="display: none;">
+                    <div class="row text-end">
+                        <div class="col-sm-12">
+                            <a href="javascript:void(0)" class="btn btn-warning" onclick="back()">Back</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 text-center">
+                        <h3>Thickness Of Glass</h3>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="">What is thickness of glass?</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Select</option>
+                                <option value="1/8">1/8</option>
+                                <option value="3/16">3/16</option>
+                                <option value="1/4">1/4</option>
+                                <option value="3/32">3/32</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-sm-12 text-center">
+                        <h3>Shape Of Glass</h3>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="">What is shape of glass?</label>
+                            <select name="" class="form-control" id="">
+                                <option value="">Select</option>
+                                <option value="Square">Square</option>
+                                <option value="Any Other Shape">Any Other Shape</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6 text-center">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img src="images/window/rect.jfif" class="img-fluid img" alt="">
+                                    <br>
+                                    <em>Square</em>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img src="images/window/other.jfif" class="img-fluid img" alt="">
+                                    <br>
+                                    <em>Other</em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-sm-12 text-center">
+                        <h3>Safety Glass</h3>
+                    </div>
+                    <hr>
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <label for="">Is the window 24" from door?</label>
+                            <select name="" class="form-control" id="">
+                                <option value="">Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                            <label for="">Is the window within bathtub location</label>
+                            <select name="" class="form-control" id="">
+                                <option value="">Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6 text-center">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                   <input type="file" name="" id="" class="form-control">
+                                    <br>
+                                    <em>Picture of glass location next to door</em>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="file" name="" id="" class="form-control">
+                                    <br>
+                                    <em>Picture of glass location in bathtub</em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-sm-12 text-center">
+                        <h3>Approx Glass size</h3>
+                    </div>
+                    <hr>
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <label for="">Approx Width of Glass</label>
+                            <input type="text" name="" placeholder="Width" id="" class="form-control">
+                            <label for="">Approx Height of Glass</label>
+                            <input type="text" name="" placeholder="Height" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-6 text-center">
+                            <div class="row">
+                                <h4>Upload Picture of Glass interior & exterior</h4>
+                                <div class="col-sm-6">
+                                   <input type="file" name="" id="" class="form-control">
+                                    <br>
+                                    <em>Picture of glass interior</em>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="file" name="" id="" class="form-control">
+                                    <br>
+                                    <em>Picture of glass exterior</em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-sm-12 text-center">
+                        <h3>Installation</h3>
+                    </div>
+                    <hr>
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <label for="">On What Floor Glass is?</label>
+                            <select name="" class="form-control" id="">
+                                <option value="">Select</option>
+                                <option value="1st Floor">1st Floor</option>
+                                <option value="2nd Floor">2nd Floor</option>
+                                <option value="Ground Floor">Ground Floor</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <br>
+                            <label for="">Upload Refrence Picture</label>
+                            <input type="file" name=""  id="" class="form-control">
+                        </div>
+                        <div class="col-sm-6 text-center">
+                            <label for="">is there any obstruction?</label>
+                            <select name="" class="form-control" id="">
+                                <option value="">Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                            <br>
+                            <label for="">Upload Refrence Picture</label>
+                            <input type="file" name=""  id="" class="form-control">
+                        </div>
+                    </div>
+                    <!-- thickness section start here -->
+
+                </section>
+
+                <!-- doublepane --> 
+                <section id="glass_doublepane" style="display: none;">
+                    <div class="row text-end">
+                        <div class="col-sm-12">
+                            <a href="javascript:void(0)" class="btn btn-warning" onclick="back()">Back</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 text-center">
+                        <h3>Shape Of Glass</h3>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="">What is shape of glass?</label>
+                            <select name="" class="form-control" id="">
+                                <option value="">Select</option>
+                                <option value="Square">Square</option>
+                                <option value="Any Other Shape">Any Other Shape</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6 text-center">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img src="images/window/rect.jfif" class="img-fluid img" alt="">
+                                    <br>
+                                    <em>Square</em>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img src="images/window/other.jfif" class="img-fluid img" alt="">
+                                    <br>
+                                    <em>Other</em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-sm-12 text-center">
+                        <h3>Safety Glass</h3>
+                    </div>
+                    <hr>
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <label for="">Is the window 24" from door?</label>
+                            <select name="" class="form-control" id="">
+                                <option value="">Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                            <label for="">Is the window within bathtub location</label>
+                            <select name="" class="form-control" id="">
+                                <option value="">Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6 text-center">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                   <input type="file" name="" id="" class="form-control">
+                                    <br>
+                                    <em>Picture of glass location next to door</em>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="file" name="" id="" class="form-control">
+                                    <br>
+                                    <em>Picture of glass location in bathtub</em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-sm-12 text-center">
+                        <h3>Approx Glass size</h3>
+                    </div>
+                    <hr>
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <label for="">Approx Width of Glass</label>
+                            <input type="text" name="" placeholder="Width" id="" class="form-control">
+                            <label for="">Approx Height of Glass</label>
+                            <input type="text" name="" placeholder="Height" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-6 text-center">
+                            <div class="row">
+                                <h4>Upload Picture of Glass interior & exterior</h4>
+                                <div class="col-sm-6">
+                                   <input type="file" name="" id="" class="form-control">
+                                    <br>
+                                    <em>Picture of glass interior</em>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="file" name="" id="" class="form-control">
+                                    <br>
+                                    <em>Picture of glass exterior</em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-sm-12 text-center">
+                        <h3>Installation</h3>
+                    </div>
+                    <hr>
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <label for="">On What Floor Glass is?</label>
+                            <select name="" class="form-control" id="">
+                                <option value="">Select</option>
+                                <option value="1st Floor">1st Floor</option>
+                                <option value="2nd Floor">2nd Floor</option>
+                                <option value="Ground Floor">Ground Floor</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <br>
+                            <label for="">Upload Refrence Picture</label>
+                            <input type="file" name=""  id="" class="form-control">
+                        </div>
+                        <div class="col-sm-6 text-center">
+                            <label for="">is there any obstruction?</label>
+                            <select name="" class="form-control" id="">
+                                <option value="">Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                            <br>
+                            <label for="">Upload Refrence Picture</label>
+                            <input type="file" name=""  id="" class="form-control">
+                        </div>
+                    </div>
+                    <!-- thickness section start here -->
+
+                </section>
+              
+            </form>
+        </div>
+    </div>
+    <script src="js/windowglass.js"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
